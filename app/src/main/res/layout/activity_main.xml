@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-
+        android:scrollbars="vertical"
         android:text="TextView"/>
 
     <Button
@@ -22,6 +22,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="get Data"
+        />
+    <Button
+        android:id="@+id/go_to_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
         />
 
 </LinearLayout>

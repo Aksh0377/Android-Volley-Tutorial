@@ -1,5 +1,6 @@
 package com.example.axay.volley_tutorial;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,7 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button;
+    private Button button,button2;
     private TextView textView;
     RequestQueue requestQueue;
 
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
        button=(Button)findViewById(R.id.button);
+        button2=(Button)findViewById(R.id.go_to_register);
+
         textView=(TextView)findViewById(R.id.textView);
         requestQueue= Volley.newRequestQueue(this);
 
@@ -74,6 +77,15 @@ public class MainActivity extends AppCompatActivity {
                   }
 
 
+        });
+
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Register.class);
+                startActivity(intent);
+            }
         });
     }
 }
