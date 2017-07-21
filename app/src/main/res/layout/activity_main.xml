@@ -30,4 +30,16 @@
         android:text="Register"
         />
 
+    <Button
+        android:id="@+id/go_to_edit_recepeints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="go to select reception" />
+
+    <Button
+        android:id="@+id/go_to_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="go to recycle" />
+
 </LinearLayout>

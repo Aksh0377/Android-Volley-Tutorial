@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register"></activity>
+        <activity android:name=".Register" />
+        <activity android:name=".listview_test" />
+        <activity android:name=".Recyclectivity"></activity>
     </application>
 
 </manifest>

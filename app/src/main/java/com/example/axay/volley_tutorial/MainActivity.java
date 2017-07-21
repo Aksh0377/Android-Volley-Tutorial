@@ -20,7 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button,button2;
+    private Button button,button2,go_to_edit_rec,got_to_recycleView;
     private TextView textView;
     RequestQueue requestQueue;
 
@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
        button=(Button)findViewById(R.id.button);
         button2=(Button)findViewById(R.id.go_to_register);
+        go_to_edit_rec=(Button)findViewById(R.id.go_to_edit_recepeints);
+        got_to_recycleView=(Button)findViewById(R.id.go_to_recyclerview);
+
 
         textView=(TextView)findViewById(R.id.textView);
         requestQueue= Volley.newRequestQueue(this);
@@ -67,8 +70,7 @@ public class MainActivity extends AppCompatActivity {
                           Log.d("error", "error from server response");
                       }}
 
-
-                      );
+                  );
 
 
                         requestQueue.add(jsonObjectRequest);
@@ -84,6 +86,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,Register.class);
+                startActivity(intent);
+            }
+        });
+
+        go_to_edit_rec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,listview_test.class);
+                startActivity(intent);
+            }
+        });
+
+        got_to_recycleView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Recyclectivity.class);
                 startActivity(intent);
             }
         });
